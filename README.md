@@ -1,70 +1,19 @@
-# Getting Started with Create React App
+## Chrome Table Extension
+Chrome Table Extension is a Google Chrome extension that allows users to securely store a secret and view it after signing in with a password. The secret is encrypted and stored locally, and the user is prompted to create a new secret on installation. The extension uses React.js for the front-end UI and the Chrome Extension API for interacting with the browser and storing data.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Getting Started
+To install the extension, simply download the code from this repository and add it to your Chrome browser as an unpacked extension.
 
-## Available Scripts
+## Usage
+Upon installation, the extension will prompt the user to create a new secret. Once the secret is generated, the user will be prompted to set a password to protect the secret. The password must be entered twice to confirm it. After the password is set, the user can log in to view the secret. The user can also regenerate the secret or log out at any time. If the user logs out, the extension will return to its initial state and prompt the user to create a new secret and password.
 
-In the project directory, you can run:
+## Development
+To develop the extension, you will need to have Node.js and npm installed on your machine. After cloning the repository, run npm install to install the required dependencies.
 
-### `npm start`
+The extension is divided into two parts: the front-end UI (located in src/) and the background script (located in public/background.js). The front-end UI uses React.js and is located in src/app.js To start the development server for the front-end, run npm start. To build the front-end for production, run npm run build.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+The background script uses the Chrome Extension API to interact with the browser and store data. The script is located in public/background.js. To build the background script for production, run npm run build-background.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
